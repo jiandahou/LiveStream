@@ -33,12 +33,12 @@ function App() {
           console.log('HLS manifest parsed, setting source to Video.js');
           player.src({
             type: 'application/x-mpegURL',
-            src: 'http://120.26.70.216:8080/hls/stream.m3u8',
+            src: 'http://120.26.70.216/hls/stream.m3u8',
           });
         });
 
         // 加载 HLS 流
-        hls.loadSource('http://120.26.70.216:8080/hls/stream.m3u8');
+        hls.loadSource('http://120.26.70.216/hls/stream.m3u8');
         hls.attachMedia(videoRef.current); // 将流绑定到 video 元素上
 
         // 清理函数，销毁 Hls.js 和 Video.js 实例
